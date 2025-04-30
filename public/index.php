@@ -1,4 +1,7 @@
 <?php
+
+require_once(SITE_ROOT.'app/view/template_engine.php');
+
 define('SITE_ROOT', __DIR__.'/../');
 // var_dump($_GET);
 // var_dump($_SERVER["REQUEST_URI"]);
@@ -22,8 +25,10 @@ if (empty($uri_parts[1])) {
 $controller_path = SITE_ROOT . "app/controller/public/$controller.php";
 
 // var_dump($controller_path);
+
 $failedToLoad = false;
-require_once(SITE_ROOT.'app/view/template_engine.php');
+
+
 if (file_exists($controller_path)) {
     include $controller_path;
     if(function_exists($action)){
