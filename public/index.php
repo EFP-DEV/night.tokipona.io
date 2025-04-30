@@ -23,7 +23,7 @@ $controller_path = SITE_ROOT . "app/controller/public/$controller.php";
 
 // var_dump($controller_path);
 $failedToLoad = false;
-
+require_once(SITE_ROOT.'app/view/template_engine.php');
 if (file_exists($controller_path)) {
     include $controller_path;
     if(function_exists($action)){
@@ -38,3 +38,4 @@ if (file_exists($controller_path)) {
 if($failedToLoad === true){
     http_response_code(404);
 }
+
