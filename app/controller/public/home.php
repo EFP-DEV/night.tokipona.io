@@ -1,5 +1,5 @@
 <?php
 
 function home(){
-    echo 'Falafel';
+    echo '<a href="/contact">go contact</a>';
 }

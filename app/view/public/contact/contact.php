@@ -1,6 +1,6 @@
 <?php
-if (isset($data['message'])) {
-    echo '<p>' . $data['message'] . '</p>';
+if (isset($data['error'])) {
+    echo '<p>' . $data['error'] . '</p>';
 }
 
 ?>

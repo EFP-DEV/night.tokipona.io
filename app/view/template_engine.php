@@ -6,6 +6,8 @@ function render($partial, $data = []): void
     $partialPath = SITE_ROOT . "app/view/public/$partial";
     if (!file_exists($skeletonPath) || !file_exists($partialPath)) {
         http_response_code(500);
+        vd($skeletonPath);
+        vd($partialPath);
         echo "Template not found.";
         return;
     }
